@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brisbane Conversion Pilot | Conversion Circle Solutions</title>
+<meta name="description" content="Free Conversion Leak Audit for Brisbane businesses with an existing website and traffic.">
+<style>
+:root{
+  --bg:#030507;--panel:#080b10;--text:#f5f7fb;--muted:#a9b0bd;
+  --blue:#1264ff;--blue2:#0a4fd1;--line:#173b79;--white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,5,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid #101722}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-.04em}.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:26px;color:#cbd0d8;font-size:14px}
+.navcta,.primary{background:var(--blue);color:white;border:0;padding:14px 20px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:.2s}
+.navcta:hover,.primary:hover{background:#2875ff;transform:translateY(-1px)}
+.hero{min-height:92vh;padding:150px 0 80px;position:relative;overflow:hidden;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 80% 25%,rgba(18,100,255,.20),transparent 32%),
+linear-gradient(125deg,transparent 0 54%,rgba(18,100,255,.07) 54% 54.5%,transparent 54.5%);}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative}
+.kicker{color:var(--blue);font-weight:900;letter-spacing:.04em;text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(52px,7vw,92px);line-height:.91;letter-spacing:-.065em;max-width:800px}
+h1 span,.blue{color:var(--blue)}
+.lead{font-size:20px;color:#c6cbd3;max-width:650px;margin:28px 0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.secondary{border:1px solid #28313e;background:transparent;color:white;padding:14px 20px;font-weight:800;cursor:pointer}
+.trust{display:flex;gap:18px;margin-top:28px;color:#8f98a6;font-size:13px;flex-wrap:wrap}
+.visual{min-height:510px;border:1px solid #152033;background:
+linear-gradient(145deg,rgba(255,255,255,.05),transparent 45%),
+radial-gradient(circle at 65% 30%,rgba(18,100,255,.32),transparent 30%),#070a0f;
+position:relative;overflow:hidden}
+.visual:after{content:"BRISBANE";position:absolute;font-size:110px;font-weight:900;color:rgba(255,255,255,.035);transform:rotate(-90deg);right:-90px;top:180px}
+.skyline{position:absolute;bottom:0;left:0;right:0;height:56%;background:
+linear-gradient(to top,rgba(0,0,0,.9),transparent),
+repeating-linear-gradient(90deg,transparent 0 38px,rgba(255,255,255,.08) 39px 40px);
+clip-path:polygon(0 100%,0 62%,8% 62%,8% 40%,15% 40%,15% 67%,23% 67%,23% 24%,30% 24%,30% 55%,37% 55%,37% 13%,44% 13%,44% 48%,51% 48%,51% 31%,59% 31%,59% 63%,67% 63%,67% 18%,74% 18%,74% 52%,82% 52%,82% 35%,90% 35%,90% 58%,100% 58%,100% 100%)}
+.badge{position:absolute;left:28px;top:28px;border:1px solid var(--blue);padding:10px 14px;color:#7eaeff;font-size:12px;font-weight:900}
+.visual-card{position:absolute;left:28px;bottom:28px;width:250px;background:rgba(3,5,7,.86);border:1px solid #25354f;padding:20px;backdrop-filter:blur(8px)}
+.visual-card strong{font-size:30px;display:block}.visual-card small{color:#8e99a8}
+section{padding:105px 0;border-top:1px solid #0d131d}
+.section-head{max-width:760px;margin-bottom:50px}
+.eyebrow{color:var(--blue);font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.08em;margin-bottom:13px}
+h2{font-size:clamp(40px,5vw,65px);line-height:.98;letter-spacing:-.05em}
+.section-head p{color:var(--muted);font-size:18px;margin-top:18px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.card{background:var(--panel);border:1px solid #151d28;padding:25px;min-height:190px}
+.card .num{color:var(--blue);font-weight:900;font-size:13px}.card h3{margin:25px 0 9px;font-size:20px}.card p{color:#8f98a5;font-size:14px}
+.diagnosis{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.leaks{border-top:1px solid var(--blue)}
+.leak{padding:19px 0;border-bottom:1px solid #1b2b43;font-size:20px}.leak:before{content:"";display:inline-block;width:8px;height:8px;background:var(--blue);margin-right:14px}
+.outcomes{display:grid;gap:15px}.outcome{font-size:20px;padding:20px;background:#080c12;border-left:3px solid var(--blue)}.outcome b{color:var(--blue)}
+.audit{background:linear-gradient(135deg,#07101f,#05070a);border:1px solid #183b78;padding:55px}
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.check{padding:14px;border:1px solid #192536;color:#c7ccd4}.check:before{content:"✓";color:var(--blue);font-weight:900;margin-right:9px}
+.pilot{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.steps{display:grid;gap:12px}.step{padding:20px;border:1px solid #172130;background:#070a0f}.step strong{color:var(--blue)}
+.fit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.fit .card{min-height:auto}.count{font-size:64px;font-weight:900;color:var(--blue);line-height:1}
+.formwrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}
+form{background:#080b10;border:1px solid #172130;padding:30px}
+label{display:block;color:#9ca5b3;font-size:13px;font-weight:700;margin:15px 0 7px}
+input,select,textarea{width:100%;background:#05070a;color:white;border:1px solid #263243;padding:14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue)}
+textarea{min-height:110px;resize:vertical}
+.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.submit{width:100%;margin-top:20px}
+.notice{font-size:12px;color:#747e8b;margin-top:12px}
+footer{padding:45px 0;border-top:1px solid #121923;color:#717b89;font-size:13px}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.76);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal.open{display:flex}.modalbox{max-width:540px;width:100%;background:#080b10;border:1px solid #1c4f9d;padding:35px}.modalbox h3{font-size:32px;letter-spacing:-.04em}.modalbox p{color:#9aa3b1;margin:12px 0 25px}
+.close{float:right;background:none;border:0;color:#9ca5b3;font-size:24px;cursor:pointer}
+@media(max-width:850px){
+.navlinks{display:none}.hero-grid,.diagnosis,.audit-grid,.pilot,.formwrap{grid-template-columns:1fr}.grid5{grid-template-columns:1fr 1fr}.fit{grid-template-columns:1fr 1fr}.hero{padding-top:125px}.visual{min-height:390px}
+}
+@media(max-width:520px){
+h1{font-size:53px}.grid5,.fit,.checklist,.formrow{grid-template-columns:1fr}.hero-actions a,.hero-actions button{width:100%}.audit{padding:30px 20px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#top">CONVERSION <span>CIRCLE</span></a>
+    <div class="navlinks">
+      <a href="#framework">Framework</a><a href="#audit">Audit</a><a href="#pilot">Pilot</a><a href="#fit">Who it's for</a>
+    </div>
+    <button class="navcta" onclick="openModal()">Apply for a pilot spot</button>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Brisbane Conversion Pilot</div>
+      <h1>FREE Conversion<br><span>Leak Audit+</span></h1>
+      <p class="lead">We're opening <b class="blue">5 pilot spots</b> for Brisbane businesses with an existing website and existing traffic.</p>
+      <div class="hero-actions">
+        <button class="primary" onclick="openModal()">Apply for a pilot spot →</button>
+        <a class="secondary" href="#audit">See what's included</a>
+      </div>
+      <div class="trust"><span>✓ Existing website</span><span>✓ Existing traffic</span><span>✓ Clear offer</span></div>
+    </div>
+    <div class="visual">
+      <div class="badge">5 PILOT SPOTS</div>
+      <div class="skyline"></div>
+      <div class="visual-card"><strong>Find the leaks.</strong><small>Fix what is quietly costing you enquiries, bookings and sales.</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">The problem</div>
+    <h2>More traffic <span class="blue">won't fix leaks.</span></h2>
+    <p>Growth starts with what you already have. Traffic without the right message gets ignored. Weak messages attract the wrong clicks. Poor experience creates drop-off. Confusing paths stop action.</p>
+  </div>
+  <div class="diagnosis">
+    <div class="leaks">
+      <div class="leak">Traffic without the right message gets ignored.</div>
+      <div class="leak">Weak messages attract the wrong clicks.</div>
+      <div class="leak">Poor experience turns interest into drop-off.</div>
+      <div class="leak">Confusing paths stop people from taking action.</div>
+      <div class="leak"><b>Fix the leaks. Then scale with confidence.</b></div>
+    </div>
+    <div class="outcomes">
+      <div class="outcome"><b>Looks good</b> — first impression matters.</div>
+      <div class="outcome"><b>Guides decisions</b> — clarity drives confidence.</div>
+      <div class="outcome"><b>Reduces friction</b> — remove what gets in the way.</div>
+      <div class="outcome"><b>Creates action</b> — make the next step obvious.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="framework">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Conversion Circle Solutions</div>
+    <h2>Turn the website into a <span class="blue">conversion system.</span></h2>
+    <p>The pilot starts with the leak diagnosis, then follows the Conversion Circle journey from first attention through response, nurture and repeat business.</p>
+  </div>
+  <div class="grid5">
+    <div class="card"><div class="num">01 / ATTRACT</div><h3>Get the right attention</h3><p>Message, offer and positioning that make the right visitor stop and understand.</p></div>
+    <div class="card"><div class="num">02 / CAPTURE</div><h3>Capture intent</h3><p>Clear CTAs, forms and low-friction paths turn interest into identifiable enquiries.</p></div>
+    <div class="card"><div class="num">03 / RESPOND</div><h3>Respond fast</h3><p>Make the next step immediate through the right channel and clear expectations.</p></div>
+    <div class="card"><div class="num">04 / NURTURE</div><h3>Follow up</h3><p>Build the sequence that keeps legitimate prospects moving instead of disappearing.</p></div>
+    <div class="card"><div class="num">05 / CONVERT</div><h3>Create action</h3><p>Reduce friction around booking, enquiry, consultation or purchase.</p></div>
+  </div>
+  <div style="margin-top:12px" class="grid5">
+    <div class="card"><div class="num">06 / RETAIN</div><h3>Keep the relationship</h3><p>Turn completed transactions into reviews, repeat opportunities and referrals.</p></div>
+    <div class="card"><div class="num">07 / REPEAT</div><h3>Build the next cycle</h3><p>Use the customer relationship to create future demand without starting from zero.</p></div>
+    <div class="card" style="grid-column:span 3"><div class="num">THE PRINCIPLE</div><h3>We don't just make a website look better.</h3><p>We examine what happens before, during and after the click — and identify where the journey loses momentum.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="audit">
+<div class="container">
+  <div class="audit">
+    <div class="audit-grid">
+      <div>
+        <div class="eyebrow">Brisbane Conversion Pilot</div>
+        <h2>Your free<br><span class="blue">conversion audit.</span></h2>
+        <p style="color:#9ca5b3;font-size:18px;margin-top:18px">A clear snapshot of what's leaking, and what to fix first.</p>
+        <button class="primary" style="margin-top:25px" onclick="openModal()">Apply for my audit →</button>
+      </div>
+      <div>
+        <div class="eyebrow">Includes</div>
+        <div class="checklist">
+          <div class="check">Messaging and offer clarity</div>
+          <div class="check">CTA journey and placement</div>
+          <div class="check">Trust signals and social proof</div>
+          <div class="check">Form friction and blockers</div>
+          <div class="check">Mobile UX and responsiveness</div>
+          <div class="check">3 priority quick wins</div>
+          <div class="check">Recommendations you can act on</div>
+          <div class="check">20–30 minute walkthrough</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="pilot">
+<div class="container pilot">
+  <div>
+    <div class="eyebrow">Why we're opening it</div>
+    <h2>The Brisbane <span class="blue">Conversion Pilot.</span></h2>
+    <p style="color:#9ca5b3;font-size:18px;margin-top:20px">A focused pilot to help Brisbane businesses find and fix what's quietly costing them growth.</p>
+    <div class="steps" style="margin-top:28px">
+      <div class="step"><strong>01</strong> This is not a free website project.</div>
+      <div class="step"><strong>02</strong> A small Brisbane pilot for serious businesses.</div>
+      <div class="step"><strong>03</strong> You get a real diagnosis, not a sales pitch.</div>
+      <div class="step"><strong>04</strong> We document genuine outcomes, not promises.</div>
+    </div>
+  </div>
+  <div style="border:1px solid #173b79;padding:40px;background:#06090e">
+    <div class="count">5</div>
+    <h3 style="font-size:34px;margin-top:10px">pilot spots</h3>
+    <p style="color:#9ca5b3;margin:12px 0 25px">For Brisbane businesses with an existing website, clear offer and some traffic or marketing activity.</p>
+    <button class="primary" onclick="openModal()">Apply now →</button>
+  </div>
+</div>
+</section>
+
+<section id="fit">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Is it right for you?</div>
+    <h2>Built for businesses that already have <span class="blue">something to optimise.</span></h2>
+  </div>
+  <div class="fit">
+    <div class="card"><h3>Existing website</h3><p>You already have a digital home.</p></div>
+    <div class="card"><h3>Clear offer</h3><p>Your business has a defined service or product.</p></div>
+    <div class="card"><h3>Some traffic</h3><p>People are already reaching your website or marketing.</p></div>
+    <div class="card"><h3>Ready to improve</h3><p>You're willing to implement practical improvements.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="apply">
+<div class="container formwrap">
+  <div>
+    <div class="eyebrow">Brisbane partner</div>
+    <h2>Your second set of eyes for <span class="blue">conversion.</span></h2>
+    <p style="color:#9ca5b3;font-size:18px;margin-top:20px">Spot the leaks you might be missing. Find what's stopping enquiries, bookings and sales. Get simple insights and clear next steps.</p>
+  </div>
+  <form onsubmit="submitForm(event)">
+    <h3 style="font-size:30px;letter-spacing:-.04em">Apply for a pilot spot</h3>
+    <p style="color:#87919f;margin-top:7px">Tell us where to find your website and what you want to improve.</p>
+    <div class="formrow">
+      <div><label>Name</label><input required id="name" placeholder="Your name"></div>
+      <div><label>Business</label><input required id="business" placeholder="Business name"></div>
+    </div>
+    <label>Website</label><input required id="website" type="url" placeholder="https://yourwebsite.com">
+    <label>Email</label><input required id="email" type="email" placeholder="you@business.com">
+    <label>What would you most like to improve?</label>
+    <select id="goal"><option>More enquiries</option><option>More bookings</option><option>More sales</option><option>Clearer website journey</option><option>I'm not sure — diagnose it</option></select>
+    <label>Anything else?</label><textarea id="message" placeholder="Tell us briefly about your current traffic, offer or biggest concern."></textarea>
+    <button class="primary submit" type="submit">Apply for a pilot spot →</button>
+    <div class="notice">No payment is taken by this demo form. Connect this form to your preferred CRM, email or calendar before production.</div>
+  </form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot">
+  <div><b style="color:white">CONVERSION <span style="color:var(--blue)">CIRCLE</span></b> — Brisbane Conversion Pilot</div>
+  <div>Conversion-focused. Practical. Outcome-led.</div>
+</div>
+</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modalbox">
+    <button class="close" onclick="closeModal()">×</button>
+    <div class="eyebrow">5 pilot spots</div>
+    <h3>Let's find your conversion leaks.</h3>
+    <p>Apply for the free Conversion Leak Audit and we'll review the key points in your website journey.</p>
+    <a class="primary" href="#apply" onclick="closeModal()" style="width:100%">Continue to application →</a>
+  </div>
+</div>
+
+<script>
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function submitForm(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const business=document.getElementById('business').value;
+  alert("Thanks, "+name+" — your pilot application for "+business+" has been captured in this demo. Connect the form to your CRM/email before going live.");
+}
+<script 
+  src="https://connector.blackgate.ph/js/external-tracking.js"
+  data-tracking-id="tk_f051e926c0a44d8a95be1259ad19ee9e">
+</script>
+
+</body>
+</html>
